@@ -1,0 +1,13 @@
+name: manhunt
+author: PhilosophyWithJosh
+version: 1.5.1
+main: me.PhilosophyWithJosh.manhunt.Main
+description: yes i am very aware that this is extremely similar to Dreams manhunt, that was the intention, this is my take on it, i hope you enjoy
+
+commands:
+  beprey:
+    description: running this command turns you into prey
+  behunter:
+    description: running this command turns you into a hunter
+  hunterlist:
+    description: prints a list of all active hunters
