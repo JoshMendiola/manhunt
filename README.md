@@ -19,6 +19,6 @@ returns a list of all current hunters
 ```bash
 /hunterlist
 ```
-## Contributing
+## contributing
 pull request would be more than appreciated, feel free to use as you please. In the case of a major change/bug, please 
 open an issue and discuss what you would like changed
