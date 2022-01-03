@@ -18,6 +18,7 @@ public class preyCommand implements CommandExecutor
 		plugin.getCommand("beprey").setExecutor(this);
 	}
 	@Override
+	//sets the command sender into the prey classification
 	public boolean onCommand(CommandSender sender, Command beprey, String label, String[] args)
 	{
 		if(sender instanceof Player)

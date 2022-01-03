@@ -23,6 +23,7 @@ public class prey implements Listener
 	{
 		return alreadyPrey;
 	}
+	//returns the location of a prey character currently being located
 	public static Location preyLoc()
 	{
 		if(preyExist())
@@ -31,21 +32,25 @@ public class prey implements Listener
 		}
 		return null;
 	}
+	//returns the name of the current prey player
 	public static Player getPrey()
 	{
 		return hunted;
 	}
+	//handles the event in which the prey character leaves the server mid game
 	public static void quit()
 	{
 		hunted = null;
 		alreadyPrey = false;
 		Bukkit.broadcastMessage(utils.chat("&cThe prey has left the server"));
 	}
+	//sets the prey to the command setter
 	public static void setPrey(Player p)
 	{
 		hunted = p;
 		alreadyPrey = true;
 	}
+	//removes the prey classification from the current prey
 	public static void removePrey()
 	{
 		hunted = null;

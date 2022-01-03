@@ -23,6 +23,7 @@ public class manhuntListeners implements Listener
 		Bukkit.getPluginManager().registerEvents(this,plugin);
 	}
 	@EventHandler
+	//gives the hunters the compass which tracks the prey movement upon their hunter classification
 	public void onHunterSpawn(PlayerRespawnEvent s)
 	{
 		if(hunter.isHunter(s.getPlayer()))
@@ -31,6 +32,7 @@ public class manhuntListeners implements Listener
 		}
 	}
 	@EventHandler
+	//powers the compass which the hunter uses to track down and hunt the prey
 	public void onHunterTrack(PlayerInteractEvent i)
 	{
 		Player tracker = i.getPlayer();
@@ -51,6 +53,7 @@ public class manhuntListeners implements Listener
 		}
 	}
 	@EventHandler
+	//handles what would happen in the event of a prey or player leaving the server
 	public void onPlayerLeave(PlayerQuitEvent q)
 	{
 		Player quitter = q.getPlayer();

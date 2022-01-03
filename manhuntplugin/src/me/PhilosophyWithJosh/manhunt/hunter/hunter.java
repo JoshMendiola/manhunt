@@ -24,6 +24,7 @@ public class hunter implements Listener
 		this.plugin = plugin;
 		Bukkit.getPluginManager().registerEvents(this, plugin);
 	}
+	//checks if a player currently is a hunter or not
 	public static boolean isHunter(Player hunt)
 	{
 		if(hunters.contains(hunt.getDisplayName()))
@@ -32,19 +33,23 @@ public class hunter implements Listener
 		}
 		return false;
 	}
+	//handles what happens if a hunter quits the game mid session, to avoid server errors
 	public static void quit(Player quitter)
 	{
 		hunters.remove(quitter.getDisplayName());
 		quitter.getInventory().removeItem(new ItemStack(Material.COMPASS));
 	}
+	//registers a new hunter
 	public static void addHunter(Player hunter)
 	{
 		hunters.add(hunter.getDisplayName());
 	}
+	//removes a registered hunter
 	public static void removeHunter(Player hunter)
 	{
 		hunters.remove(hunter.getDisplayName());
 	}
+	//returns a list of all active hunters, or a message saying there are none
 	public static String getHunterList()
 	{
 		if(hunters.size() > 0)

@@ -28,7 +28,8 @@ public class hunterCommands implements CommandExecutor
 		if(sender instanceof Player)
 		{
 			Player ht = (Player) sender;
-			//checks if the list of hunters already contains this hunter, to see if they should be added or removed
+			/*checks if the list of hunters already contains this hunter, or if they are already classed as prey, to
+			 see if they should be added or removed */
 			if(hunter.isHunter(ht) == false && ht != prey.getPrey())
 			{
 				ht.sendMessage(utils.chat("&cYou are now classed as a hunter"));

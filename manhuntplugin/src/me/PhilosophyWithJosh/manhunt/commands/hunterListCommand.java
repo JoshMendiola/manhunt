@@ -14,6 +14,7 @@ public class hunterListCommand implements CommandExecutor
 		this.plugin = plugin;
 		plugin.getCommand("hunterlist").setExecutor(this);
 	}
+	//checks to see if there are currently any active hunters, and pulls up a list of all active hunters if there are
 	public boolean onCommand(CommandSender sender, Command hunterlist, String label, String[] args)
 	{
 		if(hunter.getHunterList() != "null and none")
